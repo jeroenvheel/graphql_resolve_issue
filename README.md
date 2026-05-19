@@ -56,7 +56,26 @@ Each tenant returns its seeded `werkgebieden`:
 
 ## Actual (v16)
 
-`TenantResolvers.GetWorkspaces` runs (see console output `[TenantResolvers.GetWorkspaces] called for tenant ...`), but `werkgebieden` in the response is empty/null.
+`TenantResolvers.GetWorkspaces` runs (see console output `[TenantResolvers.GetWorkspaces] called for tenant ...`), but `werkgebieden` in the response is an empty array:
+
+```json
+{
+  "data": {
+    "tenants": [
+      {
+        "uuid": "e3f1b7ce-2df7-437f-9f7e-602606410e3e",
+        "name": "Tenant A",
+        "werkgebieden": []
+      },
+      {
+        "uuid": "1f6b0a22-7313-4cf8-9992-4d4de5d2c9f7",
+        "name": "Tenant B",
+        "werkgebieden": []
+      }
+    ]
+  }
+}
+```
 
 ## Setup
 
